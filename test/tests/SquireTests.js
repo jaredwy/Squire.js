@@ -202,6 +202,7 @@ define(['Squire'], function(Squire) {
           })
           .require(['mocks/Outfit'], function(Outfit) {
             Outfit.shirt.color.should.equal('Silver');
+            squire.mocks.hasOwnProperty('[object Object]').should.equal(false);
             done();
           });
       });

@@ -123,6 +123,10 @@ define(function() {
       each(path, function(alias, key) {
         this.mock(key, alias);
       }, this);
+      if(isArray(path)) {
+        this.mocks[path] = mock;
+      }
+      return this;
     }
     this.mocks[path] = mock;
 
